@@ -68,7 +68,7 @@ export default function Contact() {
           <a href="https://github.com/Terminalkid09/" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
-          <a href="https://www.linkedin.com/in/cristian-trif-073a883a1" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/cristian-t-073a883a1/" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
           <a href="mailto:Terminalkid09@gmail.com">
