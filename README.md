@@ -39,6 +39,17 @@ Each project includes a short description, tech stack, and GitHub link. Some inc
 **Contact**  
 EmailJS-powered form for direct communication. Fully functional and styled to match the site’s aesthetic.
 
+## Start with batch file
+
+For convenience, the project includes a Windows batch script that starts the development server with a single click.
+
+To use it:
+
+1. Make sure the batch file is placed in the project root.
+2. Double‑click the `.bat` file to automatically install missing dependencies (if needed) and launch the Vite dev server.
+
+This is an optional shortcut for local development and does not affect the production build.
+
 ## Deployment
 
 The site is deployed via Netlify and optimized for fast load times and responsive design. All assets are locally managed and the layout is fully centered and symmetrical across devices.
