@@ -1,0 +1,10 @@
+.skills-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.skills-list li {
+  margin-bottom: 12px;
+}

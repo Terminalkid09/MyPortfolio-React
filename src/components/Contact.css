@@ -1,0 +1,98 @@
+/* Layout generale */
+.contact {
+  padding-top: 120px;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.contact-subtitle {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Form centrato */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-size: 0.95rem;
+  color: var(--accent);
+}
+
+input,
+textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  padding: 12px 14px;
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 1rem;
+  transition: 0.25s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* Pulsante */
+.btn.primary {
+  margin-top: 10px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #0a0014;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+  border: none;
+}
+
+.btn.primary:hover {
+  background: #d7a6ff;
+  box-shadow: 0 0 12px var(--accent);
+}
+
+/* Social links */
+.contact-social {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.contact-social a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.contact-social a:hover {
+  color: #d7a6ff;
+  text-shadow: var(--glow-soft);
+}
