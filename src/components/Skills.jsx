@@ -11,7 +11,7 @@ export default function Skills() {
           <li><strong>Frontend:</strong> HTML, CSS, JavaScript, React</li>
           <li><strong>Backend:</strong> Node.js, Express, REST APIs, MongoDB, SQL</li>
           <li><strong>Cybersecurity:</strong> OSINT, Recon, TryHackMe labs</li>
-          <li><strong>Tools:</strong> Git, GitHub, VS Code, Netlify, Render</li>
+          <li><strong>Tools:</strong> Git, GitHub, VS Code, Netlify, Render, Docker</li>
         </ul>
       </div>
     </section>
