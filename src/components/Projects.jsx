@@ -202,6 +202,40 @@ export default function Projects() {
             </a>
           </div>
 
+          {/* SQL Security Dashboard */}
+          <div className="project-card">
+            <h3>📊 SQL Security Dashboard</h3>
+            <p>Interactive dashboard for analyzing security logs with automated data enrichment and 8 dynamic visualizations.</p>
+            <p><strong>Technologies:</strong> Python, FastAPI, SQL, Pandas, Matplotlib, Jinja2</p>
+
+            <div className="project-images">
+              <img
+                src="/img/dashboard.png"
+                alt="SQL Security Dashboard"
+                className="zoomable"
+                onClick={() => setModalImage("/img/chart.png")}
+              />
+            </div>
+
+            <a
+              href="https://sql-dashboard-m2gh.onrender.com"
+              target="_blank"
+              className="project-link"
+            >
+              🖥️ Live Demo
+            </a>
+
+            <br />
+
+            <a
+              href="https://github.com/Terminalkid09/incident-response-sql"
+              target="_blank"
+              className="project-link"
+            >
+              View code on GitHub →
+            </a>
+          </div>
+
         </div>
 
         <p className="more-coming">More projects coming soon...</p>
