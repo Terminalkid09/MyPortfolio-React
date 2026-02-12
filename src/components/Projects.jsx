@@ -210,7 +210,7 @@ export default function Projects() {
 
             <div className="project-images">
               <img
-                src="/img/dashboard.png"
+                src="/img/chart.png"
                 alt="SQL Security Dashboard"
                 className="zoomable"
                 onClick={() => setModalImage("/img/chart.png")}
