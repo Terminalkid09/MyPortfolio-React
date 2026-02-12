@@ -1,5 +1,7 @@
 # terminalkid09 — Personal Portfolio
 
+Live Portfolio: https://terminalkid09-portfolio-react.netlify.app
+
 This is my personal developer portfolio, built to showcase my skills, projects, and technical vision. It reflects my approach to full-stack development, cybersecurity, and creative digital design.
 
 ## Overview
@@ -26,13 +28,16 @@ Overview of my background, interests, and development philosophy.
 Categorized list of languages, frameworks, tools, and cybersecurity experience.
 
 **Projects**  
-Selection of personal projects including:
-- Console Password Manager in C++
-- REST API Library with Node.js
-- Text-based RPG in Python
-- OSINT Discord Bot
-- AI security suite with Python scripts
-- VaultX Note Management System (full-stack)
+
+A curated selection of my most meaningful projects, focused on cybersecurity, backend engineering, and real-world tooling.
+
+- 🔑 **Console Password Manager** — C++
+- 📚 **REST API Library** — Node.js & Express
+- 🎮 **Text-Based RPG Game** — Python (Pyodide)
+- 🤖 **OSINT Discord Bot** — Python + Docker
+- 🛡️ **AI Security Suite** — Python
+- 🔐 **VaultX** — Full-Stack Note System
+- 📊 **SQL Security Dashboard** — FastAPI + SQL
 
 Each project includes a short description, tech stack, and GitHub link. Some include live demos.
 
@@ -56,4 +61,5 @@ The site is deployed via Netlify and optimized for fast load times and responsiv
 
 ## Purpose
 
-This portfolio is designed to present my capabilities in a clear, professional format while maintaining a unique visual identity. It serves as a reference point for recruiters, collaborators, and anyone interested in my work.
+This portfolio represents my technical identity: a mix of backend engineering, cybersecurity mindset, and clean digital design.  
+It’s built to show not just what I can code, but how I think, structure, and deliver real software.
