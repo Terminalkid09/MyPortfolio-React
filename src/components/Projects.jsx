@@ -206,7 +206,7 @@ export default function Projects() {
           <div className="project-card">
             <h3>📊 SQL Security Dashboard</h3>
             <p>Interactive dashboard for analyzing security logs with automated data enrichment and 8 dynamic visualizations.</p>
-            <p><strong>Technologies:</strong> Python, FastAPI, SQL, Pandas, Matplotlib, Jinja2</p>
+            <p><strong>Technologies:</strong> Python, SQL, Pandas, Matplotlib, Jinja2</p>
 
             <div className="project-images">
               <img
