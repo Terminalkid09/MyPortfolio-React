@@ -1,4 +1,5 @@
 :root {
+  --bg: #0d001a;
   --text: #ffffff;
   --text-muted: #c9c9c9;
   --accent: #b57bff;
@@ -14,6 +15,7 @@
 
 html, body, #root {
   height: 100%;
+  background-color: #0d001a;
 }
 
 body {
@@ -63,13 +65,7 @@ body {
 }
 
 /* NAVBAR */
-.nav-inner {
-  width: 100%;
-  padding: 18px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+/* note: lo stile specifico della nav è definito in components/Navbar.css */
 
 /* -------------------------------------------------- */
 /* RESPONSIVE OPTIMIZATION */

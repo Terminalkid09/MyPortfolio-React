@@ -48,3 +48,32 @@
   border-bottom: 2px solid var(--accent);
   text-shadow: var(--glow-soft);
 }
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .nav-item {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-inner {
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px 16px;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .nav-item {
+    font-size: 0.9rem;
+  }
+}
