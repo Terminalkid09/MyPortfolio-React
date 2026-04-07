@@ -236,10 +236,40 @@ export default function Projects() {
             </a>
           </div>
 
+            {/*NodeTrace*/}
+           <div className="project-card">
+             <h3>🖲️ NodeTrace</h3>
+            <p>Full-stack monitoring platform with real-time telemetry and analytics.</p>
+            <strong>Technologies:</strong>
+            <p><b>Backend:</b> Python, FastAPI</p>
+            <hr></hr>
+            <p><b>Agents:</b> Python, C#, C++, Java</p>
+
+              <div className="project-images">
+                <img
+                  src="/img/dashboard.png"
+                  alt="NodeTrace dashboard"
+                  className="zoomable"
+                  onClick={() => setModalImage("/img/dashboard.png")}
+                />
+              </div>
+
+        <a
+          href="https://github.com/Terminalkid09/nodetrace"
+          target="_blank"
+          className="project-link"
+        >
+          View code on GitHub →
+        </a>
+      </div>
+
+
         </div>
 
         <p className="more-coming">More projects coming soon...</p>
       </div>
+
+      
 
       {/* MODAL */}
       {modalImage && (
