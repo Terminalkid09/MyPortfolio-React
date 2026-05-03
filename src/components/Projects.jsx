@@ -26,6 +26,16 @@ const featuredProjects = [
     description:
       "Phantom is a Python-based offensive security CLI framework that orchestrates reconnaissance, OSINT, web testing, brute force, exploitation, and reporting into a single interactive session. It keeps the operator in control with previewable, editable command workflows, target/scope management, and exportable session reports.",
     technologies: "Python, rich, nmap, scapy, reportlab",
+    images: [
+      {
+        src: "/img/banner.png",
+        alt: "Phantom banner",
+      },
+      {
+        src: "/img/scan.png",
+        alt: "Scan features",
+      }
+    ],
     links: [
       {
         label: "View code on GitHub →",
