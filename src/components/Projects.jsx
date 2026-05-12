@@ -4,6 +4,28 @@ import ImageModal from "./ImageModal";
 
 const featuredProjects = [
   {
+    title: "🛡️ Aegis EDR Ecosystem",
+    description:
+      "Modular EDR ecosystem for real-time process monitoring and threat detection. Features a multi-OS Java agent, a high-throughput Spring Boot ingestion gateway, and a FastAPI-based heuristic analysis engine with a React dashboard.",
+    technologies: "Java, Spring Boot, Python, FastAPI, React, Redis, Postgres, Docker",
+    images: [
+      {
+        src: "/img/dashboard-aegis.png",
+        alt: "Aegis Ecosystem Overview",
+      },
+      {
+        src: "/img/alerts.png",
+        alt: "Aegis Alerts",
+      },
+    ],
+    links: [
+      {
+        label: "View code on GitHub →",
+        href: "https://github.com/Terminalkid09/aegis-ecosystem",
+      },
+    ],
+  },
+  {
     title: "🤖 OSINT Discord Bot in Python",
     description:
       "Modular Discord bot for OSINT and cybersecurity recon tasks, built to automate data collection, domain intelligence and situational awareness workflows.",
