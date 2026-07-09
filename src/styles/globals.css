@@ -23,6 +23,7 @@ body {
   color: var(--text);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* APP ROOT */
@@ -64,59 +65,39 @@ body {
   padding: 0 40px;
 }
 
-/* NAVBAR */
-/* note: lo stile specifico della nav è definito in components/Navbar.css */
-
 /* -------------------------------------------------- */
-/* RESPONSIVE OPTIMIZATION */
+/* RESPONSIVE */
 /* -------------------------------------------------- */
 
-/* LARGE TABLET / SMALL LAPTOP */
 @media (max-width: 1024px) {
   .section {
     padding: 90px 0;
   }
-
   .section-inner {
     padding: 0 30px;
   }
-
-  .nav-inner {
-    padding: 16px 30px;
-  }
 }
 
-/* TABLET / SMARTPHONE LANDSCAPE */
 @media (max-width: 768px) {
   .section {
     padding: 70px 0;
   }
-
   .section-inner {
     padding: 0 20px;
   }
-
-  .nav-inner {
-    padding: 14px 20px;
-  }
-
   .site-container {
     max-width: 100%;
   }
 }
 
-/* SMALL PHONES */
 @media (max-width: 480px) {
   .section {
-    padding: 60px 0;
+    padding: 50px 0;
   }
-
   .section-inner {
-    padding: 0 16px;
+    padding: 0 14px;
   }
-
-  .nav-inner {
-    padding: 12px 16px;
+  body {
+    font-size: 15px;
   }
 }
-

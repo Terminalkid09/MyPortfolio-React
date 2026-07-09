@@ -10,7 +10,7 @@ export default function Hero() {
         </h1>
 
         <p className="hero-subtitle reveal">
-          A self-taught developer crafting full‑stack, secure and meaningful digital experiences.
+          Backend & security engineer. Building production-grade systems — C2 frameworks, SIEM platforms, honeypot networks, and AI-powered security tools.
         </p>
 
         <div className="hero-buttons reveal">
