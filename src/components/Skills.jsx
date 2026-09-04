@@ -8,19 +8,19 @@ export default function Skills() {
     },
     {
       title: "Backend & Frameworks",
-      items: ["FastAPI", "Spring Boot", "Node.js/Express", "SQLAlchemy", "Alembic", "asyncio"],
+      items: ["FastAPI", "Spring Boot", "Node.js/Express", "SQLAlchemy", "Alembic", "asyncio", "aiohttp", "mitmproxy"],
     },
     {
       title: "Security & Offensive",
-      items: ["C2 Frameworks", "Beacon Development", "AMSI/ETW Evasion", "SIEM/XDR", "Honeypots", "OSINT", "Penetration Testing"],
+      items: ["C2 Frameworks", "Beacon Development", "AMSI/ETW Evasion", "SIEM/XDR", "Honeypots", "OSINT", "Penetration Testing", "MITM/Proxy", "WinDivert", "Reflective Loading", "Syscalls"],
     },
     {
       title: "Databases & Infrastructure",
-      items: ["PostgreSQL", "Redis", "MongoDB", "Docker", "Docker Compose", "Nginx", "GitLab CI"],
+      items: ["PostgreSQL", "Redis", "MongoDB", "Docker", "Docker Compose", "Nginx", "GitLab CI", "GitHub Actions", "Caddy"],
     },
     {
-      title: "Frontend",
-      items: ["React", "Vite", "Tailwind CSS", "HTML/CSS", "JavaScript"],
+      title: "Frontend & Desktop",
+      items: ["React", "Vite", "Tailwind CSS", "Electron", "TypeScript", "HTML/CSS"],
     },
     {
       title: "AI / ML",

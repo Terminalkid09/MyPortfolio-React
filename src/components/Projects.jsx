@@ -4,10 +4,23 @@ import ImageModal from "./ImageModal";
 
 const featuredProjects = [
   {
-    title: "👻 Phantom — Offensive Security Framework",
+    title: "🕷️ Nyx — Professional MITM & Traffic Analysis Desktop App v1.0.0",
     description:
-      "Full-spectrum C2 framework with a native C++ beacon (30+ capabilities), AES-256-GCM encrypted C2 channel, AMSI/ETW evasion, syscall-based execution, reflective loading, and a Python CLI orchestrator with 12 modules (recon, exploit, OSINT, pivot, report). Includes Docker cross-compilation targeting Windows/Linux/macOS/Android.",
-    technologies: "Python, C++, ASM, FastAPI, aiohttp, AES-256-GCM, mitmproxy, Docker",
+      "Electron + React + FastAPI + mitmproxy desktop application for professional MITM interception and traffic analysis. Features: transparent proxy with DHCP-first stealth + ARP fallback, QUIC/HTTP3 blocking (forces TCP/TLS fallback), Activity Monitor (live SNI + HTTP Host per target without CA), HAR 1.2 export, 340+ vulnerability scanner, fuzzer, collaborator OOB server, session handling, match/replace, and guaranteed clean shutdown (3-layer: API graceful + signal handlers + atexit). Competitive with Burp Suite for LAN interception — zero-config device onboarding, no CA required for metadata visibility. 606 backend tests, 0 ESLint errors, silent installer. Target: v2.0.0 with Router Mode, Scope Engine, Mobile Companion.",
+    technologies: "Electron, React, TypeScript, FastAPI, Python, mitmproxy, WinDivert, Docker",
+    images: [
+      { src: "/img/nyx-dashboard.png", alt: "Nyx MITM dashboard" },
+      { src: "/img/nyx-icon.png", alt: "Nyx logo" },
+    ],
+    links: [
+      { label: "View code on GitHub →", href: "https://github.com/Terminalkid09/nyx" },
+    ],
+  },
+  {
+    title: "👻 Phantom — Autonomous Red Team Framework v2.0.0",
+    description:
+      "Full-spectrum offensive security framework with three integrated modes: (1) C2 Operations Center — cross-platform beacons (Windows PE, Linux ELF, Android ARM64, macOS) with AES-256-GCM + mTLS + HMAC, 35+ commands (shell, screenshot, keylog, inject, SOCKS5, SMB pipe, browser/CDP pivot, cookies, GPS, camera, audio), reflective in-memory loading, NTDLL unhooking, sleep masking, Ekko obfuscation, indirect/direct syscalls; (2) 12 Interactive Pentest Modules — scan, OSINT, web, exploit, brute, payload, handler, analyzer, pivot, wifi, wordlist, report with state-aware suggestions; (3) Autonomous Kill-Chain Agent (WIP) — deterministic planner + anomaly engine runs full kill chain (recon → exploit → beacon deploy → persistence → lateral) without human input, sub-agents for parallel campaigns, social engineering chain (persona → phish → IP grab → network pivot). Includes React + TypeScript Electron GUI (18 views), 101 tests, Docker CI/CD. 68k LOC across Python/C++/ASM/TS. Target: v3.0.0 with BloodHound, Cloud Exploit, Supply Chain, Multi-Operator.",
+    technologies: "Python, C++, ASM, FastAPI, aiohttp, React, TypeScript, Electron, Docker, AES-256-GCM, mitmproxy",
     images: [
       { src: "/img/phantomV2.png", alt: "Phantom banner" },
       { src: "/img/phantomC2.png", alt: "Phantom C2" },

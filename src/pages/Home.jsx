@@ -3,9 +3,9 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 import Skills from "../components/Skills.jsx";
 import Projects from "../components/Projects";
+import Roadmap from "../components/Roadmap";
 import Contact from "../components/Contact.jsx";
 import Footer from "../components/Footer";
-
 
 
 export default function Home() {
@@ -16,6 +16,7 @@ export default function Home() {
       <About />
       <Skills />
       <Projects />
+      <Roadmap />
       <Contact />
       <Footer />
      

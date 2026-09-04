@@ -8,10 +8,13 @@ export default function About() {
         <div className="about-content">
           <div className="about-card">
             <p>
-              I'm a 16-year-old self-taught backend & security engineer from Italy. I design and build production-grade security systems — C2 frameworks, SIEM platforms, honeypot networks, and AI-powered security tooling.
+              I'm a 16-year-old self-taught backend & security engineer from Italy. I design and build production-grade security systems — C2 frameworks, SIEM platforms, honeypot networks, MITM interception tools, and AI-powered security tooling.
             </p>
             <p>
-              My projects span the full stack: Python/FastAPI async backends, Java/Spring Boot ingestion gateways, C++ native beacons with evasion techniques, cross-platform agents, and React dashboards. Every system is containerized, tested, and CI/CD-ready.
+              My projects span the full stack: Python/FastAPI async backends, Java/Spring Boot ingestion gateways, C++ native beacons with evasion techniques, cross-platform agents, Electron/React desktop apps, and React dashboards. Every system is containerized, tested, and CI/CD-ready.
+            </p>
+            <p>
+              Current focus: <strong>Nyx</strong> — professional MITM desktop app (Electron + FastAPI + mitmproxy) with transparent proxy, QUIC blocking, Activity Monitor (live SNI/Host without CA), HAR export, and guaranteed clean shutdown; <strong>Phantom</strong> — autonomous red team framework with C2, 12 pentest modules, and autonomous kill-chain agent.
             </p>
             <p>
               I learn by building real tools that solve real problems — clean architecture, security fundamentals, and systems that work in production.
