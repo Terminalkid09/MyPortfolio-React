@@ -9,7 +9,7 @@ const featuredProjects = [
       "Electron + React + FastAPI + mitmproxy desktop application for professional MITM interception and traffic analysis. Features: transparent proxy with DHCP-first stealth + ARP fallback, QUIC/HTTP3 blocking (forces TCP/TLS fallback), Activity Monitor (live SNI + HTTP Host per target without CA), HAR 1.2 export, 340+ vulnerability scanner, fuzzer, collaborator OOB server, session handling, match/replace, and guaranteed clean shutdown (3-layer: API graceful + signal handlers + atexit). Competitive with Burp Suite for LAN interception — zero-config device onboarding, no CA required for metadata visibility. 606 backend tests, 0 ESLint errors, silent installer. Target: v2.0.0 with Router Mode, Scope Engine, Mobile Companion.",
     technologies: "Electron, React, TypeScript, FastAPI, Python, mitmproxy, WinDivert, Docker",
     images: [
-      { src: "/img/nyx-dashboard.png", alt: "Nyx MITM dashboard" },
+      { src: "/img/nyx_dashboard.png", alt: "Nyx MITM dashboard" },
       { src: "/img/nyx-icon.png", alt: "Nyx logo" },
     ],
     links: [
