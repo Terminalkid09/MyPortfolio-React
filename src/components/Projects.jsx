@@ -30,10 +30,10 @@ const featuredProjects = [
     ],
   },
   {
-    title: "🛡️ Aegis — XDR/SIEM Ecosystem",
+    title: "🛡️ Aegis — XDR/SIEM Ecosystem v4.0.0",
     description:
-      "Production-grade XDR/SIEM platform with 5 microservices: Java/Spring Boot ingestion gateway (syslog UDP + HTTP), Python/FastAPI correlation engine with 200+ threat signatures, cross-platform Java/JNA endpoint agent, host telemetry agent, and React dashboard with 12 views. Features SOAR playbook engine, AI-powered analysis (Ollama), anomaly detection, VaultX encrypted notes, and full monitoring stack.",
-    technologies: "Java + Spring Boot, Python + FastAPI, React, PostgreSQL, Redis, Docker, Caddy",
+      "End-to-end detection and response platform, installed from a clone with one command: Java/Spring Boot ingestion gateway (syslog UDP + HTTP, 12 log parsers), Python/FastAPI correlation engine, React dashboard, plus two endpoint agents — a Java/JNA EDR sensor (process lineage, file-integrity monitoring, on-demand YARA, persistence snapshots, remote response) and a host telemetry agent (metrics, network flows, users, eBPF on Linux). Detection is deterministic end to end: 15 static rules, 14 community Sigma rules run through an in-house compiler, 5 correlation rules, 111 named attack-tool signatures, IP reputation and statistical anomaly detection, with every alert mapped to MITRE ATT&CK. SIEM side: OCSF-aligned event schema with deduplication and sequence-gap detection, search across 24 filterable fields, configurable retention and OCSF export. SOAR playbooks with dry-run preview, per-action risk/reversibility metadata and rollback for the reversible ones; response actions include process-tree kill, quarantine and persistence removal. Security engineering: mTLS enrollment on an internal PKI, RBAC, full audit log. 574 backend tests, end-to-end API smoke, ~500 MB RAM with AI off.",
+    technologies: "Java + Spring Boot, Python + FastAPI, React, PostgreSQL, Redis, Docker, Caddy, Sigma, YARA",
     images: [
       { src: "/img/graph.png", alt: "Aegis graph" },
       { src: "/img/mitre.png", alt: "Aegis Mitre ATT&CK section" },
