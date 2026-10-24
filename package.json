@@ -8,9 +8,9 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "stats": "node scripts/measure-languages.mjs",
-    "stats:dry": "node scripts/measure-languages.mjs --dry",
-    "prebuild": "node scripts/measure-languages.mjs"
+    "stats": "node scripts/measure-languages.mjs --from-api Terminalkid09",
+    "stats:local": "node scripts/measure-languages.mjs",
+    "stats:dry": "node scripts/measure-languages.mjs --from-api Terminalkid09 --dry"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

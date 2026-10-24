@@ -1,37 +1,32 @@
 {
   "generatedAt": "2026-10-24",
-  "source": "git ls-files over the repositories owned by Terminalkid09",
-  "files": 2267,
+  "source": "GitHub API, public non-fork repositories owned by Terminalkid09",
+  "files": 1347,
   "repos": [
-    {
-      "name": "aegis-ecosystem",
-      "files": 341,
-      "lines": 60777
-    },
-    {
-      "name": "AnterosOs",
-      "files": 57,
-      "lines": 21792
-    },
-    {
-      "name": "hermes",
-      "files": 93,
-      "lines": 11956
-    },
-    {
-      "name": "kraken",
-      "files": 54,
-      "lines": 5945
-    },
     {
       "name": "MyPortfolio-React",
       "files": 17,
       "lines": 1717
     },
     {
-      "name": "nexus-pr",
-      "files": 47,
-      "lines": 9710
+      "name": "Phantom",
+      "files": 109,
+      "lines": 21135
+    },
+    {
+      "name": "aegis-ecosystem",
+      "files": 341,
+      "lines": 60777
+    },
+    {
+      "name": "Nyx",
+      "files": 676,
+      "lines": 81974
+    },
+    {
+      "name": "Kraken",
+      "files": 44,
+      "lines": 4082
     },
     {
       "name": "NodeTrace",
@@ -39,9 +34,9 @@
       "lines": 29422
     },
     {
-      "name": "nyx",
-      "files": 663,
-      "lines": 82843
+      "name": "LogLens-SQL",
+      "files": 33,
+      "lines": 969
     },
     {
       "name": "osint-bot-py",
@@ -49,90 +44,105 @@
       "lines": 981
     },
     {
-      "name": "phantom",
-      "files": 859,
-      "lines": 231100
+      "name": "VaultX",
+      "files": 19,
+      "lines": 1040
     },
     {
-      "name": "sweet-pixel-story",
-      "files": 62,
-      "lines": 5193
+      "name": "ai-Security-Suite",
+      "files": 31,
+      "lines": 1858
+    },
+    {
+      "name": "adventure-game-py",
+      "files": 1,
+      "lines": 422
+    },
+    {
+      "name": "password-manager-cpp",
+      "files": 1,
+      "lines": 311
+    },
+    {
+      "name": "api-library-node",
+      "files": 1,
+      "lines": 73
     }
   ],
-  "total": 461436,
+  "total": 204761,
   "languages": [
     {
       "name": "Python",
-      "lines": 322406,
-      "share": 69.9
-    },
-    {
-      "name": "TypeScript",
-      "lines": 69865,
-      "share": 15.1
+      "lines": 121392,
+      "share": 59.3
     },
     {
       "name": "C++ / headers",
-      "lines": 46407,
-      "share": 10.1
+      "lines": 34427,
+      "share": 16.8
+    },
+    {
+      "name": "TypeScript",
+      "lines": 29236,
+      "share": 14.3
     },
     {
       "name": "Java",
-      "lines": 10920,
-      "share": 2.4
+      "lines": 10334,
+      "share": 5
     },
     {
       "name": "Other",
-      "lines": 7820,
-      "share": 1.7
+      "lines": 8719,
+      "share": 4.3
     },
     {
       "name": "Go",
-      "lines": 4018,
-      "share": 0.9
+      "lines": 653,
+      "share": 0.3
     }
   ],
   "excludingTests": {
-    "total": 353650,
+    "total": 172237,
     "languages": [
       {
         "name": "Python",
-        "lines": 220045,
-        "share": 62.2
-      },
-      {
-        "name": "TypeScript",
-        "lines": 68694,
-        "share": 19.4
+        "lines": 92567,
+        "share": 53.7
       },
       {
         "name": "C++ / headers",
-        "lines": 45537,
-        "share": 12.9
+        "lines": 34294,
+        "share": 19.9
       },
       {
-        "name": "Java",
-        "lines": 8525,
-        "share": 2.4
+        "name": "TypeScript",
+        "lines": 28065,
+        "share": 16.3
       },
       {
         "name": "Other",
-        "lines": 7820,
-        "share": 2.2
+        "lines": 8719,
+        "share": 5.1
+      },
+      {
+        "name": "Java",
+        "lines": 7939,
+        "share": 4.6
       },
       {
         "name": "Go",
-        "lines": 3029,
-        "share": 0.9
+        "lines": 653,
+        "share": 0.4
       }
     ],
     "split": {
-      "Python": 62.2,
-      "TypeScript": 19.4,
-      "C++ / headers": 12.9,
-      "Java": 2.4,
-      "Other": 2.2,
-      "Go": 0.9
+      "Python": 53.7,
+      "C++ / headers": 19.9,
+      "TypeScript": 16.3,
+      "Other": 5.1,
+      "Java": 4.6,
+      "Go": 0.4
     }
   }
 }
