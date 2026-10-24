@@ -1,7 +1,7 @@
 {
   "generatedAt": "2026-10-24",
   "source": "git ls-files over the repositories owned by Terminalkid09",
-  "files": 2264,
+  "files": 2267,
   "repos": [
     {
       "name": "aegis-ecosystem",
@@ -25,8 +25,8 @@
     },
     {
       "name": "MyPortfolio-React",
-      "files": 14,
-      "lines": 1035
+      "files": 17,
+      "lines": 1717
     },
     {
       "name": "nexus-pr",
@@ -59,17 +59,17 @@
       "lines": 5193
     }
   ],
-  "total": 460754,
+  "total": 461436,
   "languages": [
     {
       "name": "Python",
       "lines": 322406,
-      "share": 70
+      "share": 69.9
     },
     {
       "name": "TypeScript",
       "lines": 69865,
-      "share": 15.2
+      "share": 15.1
     },
     {
       "name": "C++ / headers",
@@ -83,8 +83,8 @@
     },
     {
       "name": "Other",
-      "lines": 7138,
-      "share": 1.5
+      "lines": 7820,
+      "share": 1.7
     },
     {
       "name": "Go",
@@ -93,17 +93,17 @@
     }
   ],
   "excludingTests": {
-    "total": 352968,
+    "total": 353650,
     "languages": [
       {
         "name": "Python",
         "lines": 220045,
-        "share": 62.3
+        "share": 62.2
       },
       {
         "name": "TypeScript",
         "lines": 68694,
-        "share": 19.5
+        "share": 19.4
       },
       {
         "name": "C++ / headers",
@@ -117,8 +117,8 @@
       },
       {
         "name": "Other",
-        "lines": 7138,
-        "share": 2
+        "lines": 7820,
+        "share": 2.2
       },
       {
         "name": "Go",
@@ -127,11 +127,12 @@
       }
     ],
     "split": {
-      "Python": 62.3,
-      "TypeScript": 19.5,
+      "Python": 62.2,
+      "TypeScript": 19.4,
       "C++ / headers": 12.9,
       "Java": 2.4,
-      "Other": 2
+      "Other": 2.2,
+      "Go": 0.9
     }
   }
 }
