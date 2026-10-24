@@ -1,12 +1,16 @@
+/* .section-title moved to globals.css: it was declared here and in
+ * Projects.css with different values, so which one won depended on the
+ * bundle order. */
+/* 700px, not 800px: at 1.05rem the wider card ran to ~86 characters a line. */
 .about-content {
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
 .about-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--surface);
   border: 1px solid var(--border-subtle);
-  border-radius: 12px;
+  border-radius: var(--radius);
   padding: 36px;
   transition: 0.3s;
 }
@@ -26,12 +30,6 @@
   margin-bottom: 0;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 28px;
-}
-
 @media (max-width: 768px) {
   .about-card {
     padding: 24px 20px;
@@ -39,10 +37,6 @@
 
   .about-card p {
     font-size: 0.95rem;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
   }
 }
 

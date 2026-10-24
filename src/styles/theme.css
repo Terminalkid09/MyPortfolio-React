@@ -1,10 +1,67 @@
+/* theme.css — the ONE place the design tokens live.
+ *
+ * Before this, globals.css declared a SECOND :root with different values for
+ * --text, --text-muted and --border-subtle, so the colour that actually
+ * rendered depended on the import order in main.jsx rather than on a decision.
+ * Every token the components use is declared here and nowhere else.
+ *
+ * The accents follow the projects: each main one has a colour, and a card sets
+ * --card-accent from it, so a project is identifiable by colour before the
+ * title is read.
+ */
 :root {
+  /* surfaces. --bg-rgb is the same colour as channels: the veil, the fixed bar
+   * and the footer need it at partial opacity, and rgba() cannot read a hex.
+   *
+   * --surface used to be 3% white, which is a tint, not a surface: it left the
+   * moving network as visible behind the text as it was beside it. It is a
+   * dark fill now, a shade above --bg, and that is what lets the veil over the
+   * viewport stay open enough for the network to be seen at all — the panels
+   * carry the readability of everything written on them (measured: worst-case
+   * background luminance behind card text 0.015, contrast 4.7:1 or better). */
   --bg: #0d001a;
-  --bg-soft: #16002b;
-  --accent: #b57bff;
-  --accent-soft: #c38aff;
+  --bg-rgb: 13, 0, 26;
+  --surface: rgba(24, 7, 44, 0.96);
+  --surface-strong: rgba(32, 12, 58, 0.97);
+
+  /* text */
   --text: #e6d9ff;
   --text-muted: #a88fd1;
+  --text-dim: #9481c0;            /* 5.97:1 on --bg, 5.58:1 on a panel */
+
+  /* borders */
   --border-subtle: rgba(181, 123, 255, 0.25);
+  --border-strong: rgba(181, 123, 255, 0.55);
+
+  /* accents — global, then one per main project */
+  --accent: #b57bff;
+  --accent-soft: #c38aff;
+  --accent-ink: #0a0014;          /* text on an accent fill */
+  --c-nyx: #b57bff;               /* violet  */
+  --c-phantom: #4ade80;           /* green   */
+  --c-aegis: #4cc9f0;             /* cyan    */
+  --c-kraken: #2ee6c5;            /* teal    */
+
+  /* effects. --glow-strong was USED in Hero.css and never defined, so those
+   * declarations were invalid and dropped by the browser: the glow the hero
+   * asked for did not exist. */
   --glow-soft: 0 0 18px rgba(181, 123, 255, 0.35);
+  --glow-strong: 0 0 26px rgba(181, 123, 255, 0.6);
+
+  /* shape */
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-pill: 999px;
+
+  /* type */
+  --mono: ui-monospace, "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+
+  /* layout. --measure is the one line length: prose is capped in `ch`, so the
+   * cap follows the font size instead of needing a different number per
+   * section. At 1.05rem it is ~75 characters, at 0.9rem ~70 — both inside the
+   * 45-75 where a line is easiest to track. Without it the About paragraphs ran
+   * to ~86 characters and the Skills note to ~111, which is where a reader
+   * starts losing the start of the next line. */
+  --maxw: 1200px;
+  --measure: 66ch;
 }

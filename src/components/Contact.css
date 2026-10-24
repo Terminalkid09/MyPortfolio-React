@@ -1,23 +1,24 @@
-/* Layout generale */
+/* Contact — the form and the two links.
+ * Every selector is scoped under .contact now: `label`, `input`, `textarea`
+ * and `.btn.primary` used to be GLOBAL rules in this file, which leaked into
+ * anything else on the page (and .btn.primary was also defined in Hero.css
+ * with different padding). */
 .contact {
   padding-top: 120px;
 }
 
 .contact-title {
-  text-align: center;
-  font-size: 2.2rem;
   margin-bottom: 12px;
 }
 
 .contact-subtitle {
   text-align: center;
-  max-width: 700px;
+  max-width: min(700px, var(--measure));
   margin: 0 auto 40px;
   font-size: 1.1rem;
-  opacity: 0.9;
+  color: var(--text-muted);
 }
 
-/* Form centrato */
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
@@ -26,60 +27,78 @@
   gap: 20px;
 }
 
-.form-group {
+.contact-form .form-group {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-label {
+.contact-form label {
   font-size: 0.95rem;
   color: var(--accent);
 }
 
-input,
-textarea {
-  background: rgba(255, 255, 255, 0.05);
+.contact-form input,
+.contact-form textarea {
+  background: var(--surface-strong);
   border: 1px solid var(--border-subtle);
   padding: 12px 14px;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   color: var(--text);
   font-size: 1rem;
+  font-family: inherit;
   transition: 0.25s;
 }
 
-input:focus,
-textarea:focus {
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--text-dim);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
   border-color: var(--accent);
   box-shadow: 0 0 8px var(--accent);
 }
 
-textarea {
+.contact-form textarea {
   min-height: 140px;
   resize: vertical;
 }
 
-/* Pulsante */
-.btn.primary {
+.contact-form .btn.primary {
   margin-top: 10px;
   padding: 12px 20px;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   background: var(--accent);
-  color: #0a0014;
+  color: var(--accent-ink);
   font-weight: 600;
   cursor: pointer;
   transition: 0.25s;
   border: none;
 }
 
-.btn.primary:hover {
-  background: #d7a6ff;
+.contact-form .btn.primary:hover:not(:disabled) {
+  background: var(--accent-soft);
   box-shadow: 0 0 12px var(--accent);
 }
 
-/* Social links */
+.contact-form .btn.primary:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+/* aria-live wraps this, so it stays in the layout even while empty: a node
+ * that appears together with its text is not reliably announced. */
+.contact-status {
+  min-height: 1.4em;
+  margin-top: 18px;
+  text-align: center;
+  color: var(--accent);
+}
+
 .contact-social {
-  margin-top: 40px;
+  margin-top: 32px;
   display: flex;
   justify-content: center;
   gap: 24px;
@@ -93,6 +112,25 @@ textarea {
 }
 
 .contact-social a:hover {
-  color: #d7a6ff;
+  color: var(--accent-soft);
   text-shadow: var(--glow-soft);
+}
+
+@media (max-width: 768px) {
+  /* 44px touch targets: the two links under the form and the submit button. */
+  .contact-social a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .contact-form .btn.primary {
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding-top: 80px;
+  }
 }

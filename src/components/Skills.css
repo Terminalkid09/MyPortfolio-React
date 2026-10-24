@@ -1,3 +1,84 @@
+/* Skills — the measured language split, then the categories.
+ * The tags reuse .chip from globals.css instead of redefining .skill-tag.
+ * Mono is kept for the numbers only (the value column and the line counts),
+ * where a fixed advance width is what makes the column readable; the language
+ * names next to them are prose and use the body font. */
+.stack-block {
+  max-width: 860px;
+  margin: 0 auto 56px;
+  padding: 28px 30px;
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+}
+
+.stack-title {
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.stack-rows {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.stack-row {
+  display: grid;
+  grid-template-columns: 150px 1fr 130px;
+  align-items: center;
+  gap: 14px;
+}
+
+.stack-name {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.stack-track {
+  display: block;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+/* min-width keeps a 0.9% bar visible as a sliver instead of nothing: the
+ * number next to it is what carries the measurement. */
+.stack-fill {
+  display: block;
+  height: 100%;
+  min-width: 3px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+  box-shadow: var(--glow-soft);
+}
+
+.stack-value {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-align: right;
+}
+
+.stack-lines {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+/* The note sits under an 860px block, which at 0.9rem was a ~111 character
+ * line; the measure caps it without touching the block itself. */
+.stack-note {
+  margin-top: 22px;
+  max-width: var(--measure);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -7,9 +88,9 @@
 }
 
 .skill-category {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--surface);
   border: 1px solid var(--border-subtle);
-  border-radius: 12px;
+  border-radius: var(--radius);
   padding: 24px;
   transition: 0.3s;
 }
@@ -32,23 +113,33 @@
   gap: 8px;
 }
 
-.skill-tag {
-  padding: 5px 12px;
-  border: 1px solid var(--border-subtle);
-  border-radius: 6px;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  background: rgba(181, 123, 255, 0.05);
-  transition: 0.2s;
-}
+@media (max-width: 768px) {
+  .stack-block {
+    padding: 22px 18px;
+  }
 
-.skill-tag:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  background: rgba(181, 123, 255, 0.12);
+  .stack-row {
+    grid-template-columns: 110px 1fr;
+    row-gap: 6px;
+  }
+
+  /* the value drops to its own line rather than squeezing the track */
+  .stack-value {
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+
+  .stack-lines {
+    display: inline;
+    margin-left: 8px;
+  }
 }
 
 @media (max-width: 480px) {
+  .stack-block {
+    margin-bottom: 36px;
+  }
+
   .skills-grid {
     grid-template-columns: 1fr;
     gap: 16px;

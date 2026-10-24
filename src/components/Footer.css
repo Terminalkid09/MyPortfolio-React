@@ -1,20 +1,12 @@
-@media (max-width: 768px) {
-  .footer {
-    flex-direction: column;
-    gap: 12px;
-    text-align: center;
-  }
-
-  .footer-links {
-    gap: 16px;
-  }
-}
-
+/* Base rules first, media queries after: this file used to open with its
+ * @media block, which is legal CSS and confusing to read. */
 .footer {
   width: 100%;
   padding: 30px 40px;
   border-top: 1px solid var(--border-subtle);
-  background: rgba(13, 0, 26, 0.4);
+  /* The bar runs the full width, so its two ends sit where the veil is
+   * thinnest; at 0.4 the network showed through behind the text. */
+  background: rgba(var(--bg-rgb), 0.8);
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
@@ -25,8 +17,8 @@
 }
 
 .footer-text {
-  color: var(--text-muted);
-  font-size: 0.9rem;
+  color: var(--text-dim);
+  font-size: 0.875rem;
 }
 
 .footer-links {
@@ -43,5 +35,24 @@
 
 .footer-links a:hover {
   text-shadow: var(--glow-soft);
-  color: #d7a6ff;
+  color: var(--accent-soft);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .footer-links {
+    gap: 16px;
+  }
+
+  /* 44px touch targets, like every other control on a narrow screen. */
+  .footer-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
 }

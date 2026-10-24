@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Terminalkid09">
+  <rect width="64" height="64" rx="14" fill="#0d001a" />
+  <g stroke="#b57bff" stroke-opacity="0.55" stroke-width="2" stroke-linecap="round">
+    <line x1="17" y1="20" x2="33" y2="13" />
+    <line x1="33" y1="13" x2="48" y2="27" />
+    <line x1="17" y1="20" x2="30" y2="44" />
+    <line x1="30" y1="44" x2="48" y2="27" />
+  </g>
+  <g stroke="#4cc9f0" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round">
+    <line x1="30" y1="44" x2="47" y2="49" />
+  </g>
+  <g fill="#b57bff">
+    <circle cx="17" cy="20" r="3.6" />
+    <circle cx="48" cy="27" r="3.4" />
+  </g>
+  <g fill="#4cc9f0">
+    <circle cx="33" cy="13" r="2.8" />
+    <circle cx="47" cy="49" r="2.4" />
+  </g>
+  <circle cx="30" cy="44" r="3.2" fill="#2ee6c5" />
+</svg>

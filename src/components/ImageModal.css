@@ -1,9 +1,6 @@
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
   background: rgba(0, 0, 0, 0.85);
   display: flex;
   justify-content: center;
@@ -15,8 +12,38 @@
 .modal-image {
   max-width: 90%;
   max-height: 90%;
-  border-radius: 12px;
+  border-radius: var(--radius);
   border: 2px solid var(--accent);
   box-shadow: 0 0 20px rgba(181, 123, 255, 0.5);
   cursor: default;
+}
+
+/* An explicit close button: Escape works, but it is not discoverable, and the
+ * overlay-as-close-button is not reachable by keyboard. */
+.modal-close {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border-subtle);
+  background: rgba(var(--bg-rgb), 0.85);
+  color: var(--text);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.modal-close:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: var(--glow-soft);
+}
+
+@media (max-width: 480px) {
+  .modal-close {
+    top: 12px;
+    right: 12px;
+  }
 }

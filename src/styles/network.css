@@ -1,0 +1,92 @@
+/* network.css — the background layers, in the order they are painted:
+ * the canvas, then the veil on top of it.
+ *
+ * They sit at z-index -2 and -1, so they land above the body background and
+ * below every piece of content, and `pointer-events: none` keeps them out of
+ * the way of clicks and text selection.
+ */
+.network {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.network-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* The readability layer.
+ *
+ * The canvas alone is a texture at a few percent opacity, but "a few percent"
+ * is still movement behind a paragraph. This radial holds the dark where the
+ * text is and opens up towards the edges, where the network is decoration
+ * nobody is reading through.
+ *
+ * Two earlier versions of this file got it wrong in opposite directions, and
+ * both were caught by measuring rather than by looking:
+ *
+ *   - every stop at 0.76 or above made the veil a full-viewport dark layer.
+ *     It scored beautifully — every contrast ratio above 5 — and with the
+ *     content hidden the network covered 0.04% of the screen: 400 pixels of
+ *     1.3 million. A background nobody can see is a filter over nothing.
+ *   - opening the edges up evenly then put text over lit mesh: on a 768px
+ *     viewport the content column runs almost the full width, so the "edge"
+ *     of the ellipse landed on a paragraph and its contrast fell to 3.24:1.
+ *
+ * A radial vignette was the third attempt and it is the wrong tool: what it
+ * holds dark is a region of the VIEWPORT, and the reading column moves through
+ * the viewport as you scroll. Every version of it either lit a paragraph near
+ * an edge (measured 3.24:1 on a 768px viewport, where the content column runs
+ * nearly the full width) or was dark enough to hide the mesh entirely.
+ *
+ * So the light is placed against the geometry of the PAGE instead: two rails
+ * down the outer 120px, ramp to full dark by 220px, and dark the rest of the
+ * way across. The prose is centred and at most ~66 characters wide, so it is
+ * never closer to an edge than ~340px on a screen wide enough to have rails at
+ * all, and the panels between are their own opaque surfaces.
+ *
+ * The colours come from --bg-rgb (theme.css), so the veil, the fixed bar and
+ * the footer stay the same surface as the page.
+ */
+.network-veil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(var(--bg-rgb), 0.06) 0,
+      rgba(var(--bg-rgb), 0.06) 120px,
+      rgba(var(--bg-rgb), 0.93) 220px,
+      rgba(var(--bg-rgb), 0.93) calc(100% - 220px),
+      rgba(var(--bg-rgb), 0.06) calc(100% - 120px),
+      rgba(var(--bg-rgb), 0.06) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(var(--bg-rgb), 0.55) 0%,
+      rgba(var(--bg-rgb), 0) 8%,
+      rgba(var(--bg-rgb), 0) 92%,
+      rgba(var(--bg-rgb), 0.55) 100%
+    );
+}
+
+/* Under 980px the rails would land on the text: the content column is inset by
+ * 80px there at most, and a paragraph reaches every part of the viewport at
+ * some scroll position, so there is no strip beside it that is safely empty.
+ *
+ * The veil closes flat — and flat is the honest answer. A radial that opened
+ * top and bottom instead was measured with a paragraph sitting in the lit band
+ * at 3.24:1; anything that opens somewhere in the viewport can have text in it
+ * later. What is left is a deep violet field with the network at about a tenth
+ * of its value: enough to keep the page from looking dead, not enough to
+ * compete with a line of text.
+ */
+@media (max-width: 980px) {
+  .network-veil {
+    background: rgba(var(--bg-rgb), 0.94);
+  }
+}
+

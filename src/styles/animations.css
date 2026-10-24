@@ -1,3 +1,9 @@
+/* animations.css — the reveal-on-scroll transition.
+ *
+ * The animation is decoration, so it is switched off when the visitor asked
+ * for reduced motion. Without the override the elements would keep the
+ * opacity:0 they START from and the page would look empty.
+ */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -7,4 +13,12 @@
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

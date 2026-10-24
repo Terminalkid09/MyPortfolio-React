@@ -1,21 +1,17 @@
-:root {
-  --bg: #0d001a;
-  --text: #ffffff;
-  --text-muted: #c9c9c9;
-  --accent: #b57bff;
-  --border-subtle: rgba(255, 255, 255, 0.1);
-}
-
-/* RESET */
+/* globals.css — reset, layout and the primitives every section shares.
+ * Tokens live in theme.css, imported right after this file: this one declares
+ * no colour of its own.
+ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
-  background-color: #0d001a;
 }
 
 body {
@@ -26,30 +22,49 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* APP ROOT */
+/* APP SHELL */
 .app-root {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* FULL WIDTH WRAPPER */
 .fullscreen-container {
   width: 100%;
 }
 
-/* SITE CENTERING */
 .site-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--maxw);
   margin: 0 auto;
 }
 
-/* MAIN CONTENT */
 .app-main {
   flex: 1;
   position: relative;
   overflow: hidden;
+}
+
+/* SKIP LINK — the first thing a keyboard reaches, invisible until focused.
+ * inline-flex + min-height so it is a 44px tap target like the rest. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 2000;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 16px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 var(--radius-sm) 0;
+}
+
+.skip-link:focus {
+  left: 0;
 }
 
 /* SECTION SYSTEM */
@@ -65,10 +80,70 @@ body {
   padding: 0 40px;
 }
 
-/* -------------------------------------------------- */
-/* RESPONSIVE */
-/* -------------------------------------------------- */
+/* ONE definition of a section title. It used to be declared twice — About.css
+ * (2.2rem) and Projects.css (2.4rem, in accent colour) — and with global CSS
+ * and equal specificity the size and colour followed the bundle order. */
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 28px;
+  color: var(--accent);
+  text-shadow: var(--glow-soft);
+}
 
+.section-note {
+  max-width: min(760px, var(--measure));
+  margin: 0 auto 32px;
+  text-align: center;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* SHARED PRIMITIVES — chips and badges (Projects + Skills use both).
+ * They read --card-accent, so inside a project card they take the colour of
+ * that project and everywhere else they fall back to the global accent. */
+.chip {
+  display: inline-block;
+  padding: 5px 12px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  background: var(--surface);
+  transition: 0.2s;
+}
+
+.chip:hover {
+  border-color: var(--border-strong, var(--card-accent, var(--accent)));
+  color: var(--card-accent, var(--accent));
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--text-muted);
+  font-family: var(--mono);
+  /* 0.8rem was 12.8px — the smallest text on the page, in a monospace face. */
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.badge-accent {
+  border-color: var(--card-accent, var(--accent));
+  color: var(--card-accent, var(--accent));
+}
+
+/* FOCUS — visible everywhere, since the theme is dark and the browser default
+ * ring is nearly invisible on it. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* RESPONSIVE */
 @media (max-width: 1024px) {
   .section {
     padding: 90px 0;
@@ -88,6 +163,9 @@ body {
   .site-container {
     max-width: 100%;
   }
+  .section-title {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -99,5 +177,8 @@ body {
   }
   body {
     font-size: 15px;
+  }
+  .section-title {
+    font-size: 1.5rem;
   }
 }

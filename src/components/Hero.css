@@ -1,44 +1,106 @@
+/* Hero — the first screen.
+ *
+ * `min-height` rather than `height`: with a fixed 100vh the content overflowed
+ * on short viewports and the mobile rule had to fight it with a fixed
+ * padding-top.
+ */
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
 }
 
-/* STRINGIAMO SOLO IL BLOCCO DI TESTO */
-.hero-text {
-  max-width: 700px;
-  margin: 0 auto 24px;
+.hero-inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* The role, in a single pill. It replaces the `$ whoami` prompt line, which
+ * was decoration that also failed contrast at --text-dim. */
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 15px 6px 12px;
+  margin-bottom: 22px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.hero-eyebrow::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+}
+
+/* clamp() instead of a 3.2rem size plus two media-query overrides: the title
+ * now scales with the viewport and stays on one line at every width. */
 .hero-title {
-  font-size: 3.2rem;
+  font-size: clamp(2.1rem, 5vw, 3.3rem);
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 10px;
+  margin-bottom: 16px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+/* --glow-strong is declared in theme.css. It used to be referenced here and
+ * never defined, so both this rule and the primary button's hover glow were
+ * invalid declarations that the browser dropped silently.
+ * The glow on the name is --glow-soft: at --glow-strong the halo was bright
+ * enough to smear the letters underneath it. */
+.accent {
+  color: var(--accent);
   text-shadow: var(--glow-soft);
 }
 
-.accent {
-  color: var(--accent);
-  text-shadow: var(--glow-strong);
-}
-
 .hero-subtitle {
+  max-width: min(760px, var(--measure));
   font-size: 1.2rem;
   color: var(--text-muted);
-  margin-bottom: 10px;
   line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+/* Three chips, the same primitive the Skills grid uses. No mono and no "▸"
+ * bullets: at 13.6px in --text-dim the old list failed contrast, and the
+ * project count in it went stale every time a project was added. */
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  margin-bottom: 34px;
+}
+
+.hero-meta .chip {
+  padding: 7px 14px;
+  font-size: 0.875rem;
+  color: var(--text-muted);
 }
 
 .hero-buttons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 16px;
 }
 
 .btn {
   padding: 12px 26px;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   text-decoration: none;
   font-weight: 600;
   transition: 0.25s;
@@ -46,24 +108,45 @@
 
 .btn.primary {
   background: var(--accent);
-  color: #0a0014;
+  color: var(--accent-ink);
   box-shadow: var(--glow-soft);
 }
 
 .btn.primary:hover {
-  background: #d7a6ff;
+  background: var(--accent-soft);
   box-shadow: var(--glow-strong);
 }
 
-/* Mobile */
+/* .btn.secondary was used in Hero.jsx and had NO rule anywhere, so the GitHub
+ * button rendered as bare text beside a styled one. */
+.btn.secondary {
+  border: 1px solid var(--border-subtle);
+  color: var(--text);
+  background: var(--surface);
+}
+
+.btn.secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: var(--glow-soft);
+}
+
+.btn.ghost {
+  color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  padding: 12px 4px;
+}
+
+.btn.ghost:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
 @media (max-width: 768px) {
   .hero {
-    height: auto;
-    padding-top: 160px;
-  }
-
-  .hero-title {
-    font-size: 2.2rem;
+    min-height: auto;
+    padding-top: 140px;
   }
 
   .hero-subtitle {
@@ -72,17 +155,12 @@
 
   .hero-buttons {
     flex-direction: column;
+    width: 100%;
     gap: 12px;
   }
 
   .btn {
     width: 100%;
+    text-align: center;
   }
-}
-
-.hero-inner {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }

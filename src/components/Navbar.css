@@ -2,14 +2,22 @@
   width: 100%;
   position: fixed;
   top: 0;
+  /* `left` has to be stated. A fixed element with `left: auto` uses its
+   * STATIC position as the offset while `width: 100%` still resolves against
+   * the viewport, so the bar was anchored at the container's left edge: on a
+   * viewport wider than --maxw it started 120px in and ran 120px past the
+   * right edge, and the left strip had no bar behind it at all. */
+  left: 0;
   z-index: 1000;
-  background: rgba(13, 0, 26, 0.6);
+  /* Near-opaque: the bar crosses the top of the viewport, which is the one
+   * band where the veil is deliberately thin, so it has to be its own surface. */
+  background: rgba(var(--bg-rgb), 0.92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-subtle);
 }
 
 .nav-inner {
-  max-width: 1200px;
+  max-width: var(--maxw);
   margin: 0 auto;
   padding: 18px 40px;
   display: flex;
@@ -17,12 +25,22 @@
   align-items: center;
 }
 
+/* The wordmark. It was monospace with a blinking "_" caret after it — the
+ * terminal costume, in the one place a visitor reads before scrolling. The
+ * accent marks the suffix instead, which needs no animation. */
 .logo {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  color: var(--text);
   text-decoration: none;
   white-space: nowrap;
+}
+
+.logo-suffix {
+  color: var(--accent);
 }
 
 .nav-links {
@@ -52,7 +70,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px;
+  padding: 0;
 }
 
 .hamburger span {
@@ -77,8 +95,20 @@
 }
 
 @media (max-width: 768px) {
+  /* A 44px tap target without a taller bar: the box grows, and the negative
+   * margin gives the space back to the layout. */
   .hamburger {
     display: flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    margin: -10px -10px -10px 0;
+  }
+
+  .logo {
+    padding: 11px 4px;
+    margin: -11px -4px;
   }
 
   .nav-links {
@@ -88,7 +118,7 @@
     left: 0;
     width: 100%;
     flex-direction: column;
-    background: rgba(13, 0, 26, 0.95);
+    background: rgba(var(--bg-rgb), 0.97);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-subtle);
     padding: 16px 20px;
@@ -100,6 +130,9 @@
   }
 
   .nav-item {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
     font-size: 1.05rem;
   }
 }
