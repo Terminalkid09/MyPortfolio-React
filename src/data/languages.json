@@ -1,0 +1,137 @@
+{
+  "generatedAt": "2026-10-24",
+  "source": "git ls-files over the repositories owned by Terminalkid09",
+  "files": 2264,
+  "repos": [
+    {
+      "name": "aegis-ecosystem",
+      "files": 341,
+      "lines": 60777
+    },
+    {
+      "name": "AnterosOs",
+      "files": 57,
+      "lines": 21792
+    },
+    {
+      "name": "hermes",
+      "files": 93,
+      "lines": 11956
+    },
+    {
+      "name": "kraken",
+      "files": 54,
+      "lines": 5945
+    },
+    {
+      "name": "MyPortfolio-React",
+      "files": 14,
+      "lines": 1035
+    },
+    {
+      "name": "nexus-pr",
+      "files": 47,
+      "lines": 9710
+    },
+    {
+      "name": "NodeTrace",
+      "files": 63,
+      "lines": 29422
+    },
+    {
+      "name": "nyx",
+      "files": 663,
+      "lines": 82843
+    },
+    {
+      "name": "osint-bot-py",
+      "files": 11,
+      "lines": 981
+    },
+    {
+      "name": "phantom",
+      "files": 859,
+      "lines": 231100
+    },
+    {
+      "name": "sweet-pixel-story",
+      "files": 62,
+      "lines": 5193
+    }
+  ],
+  "total": 460754,
+  "languages": [
+    {
+      "name": "Python",
+      "lines": 322406,
+      "share": 70
+    },
+    {
+      "name": "TypeScript",
+      "lines": 69865,
+      "share": 15.2
+    },
+    {
+      "name": "C++ / headers",
+      "lines": 46407,
+      "share": 10.1
+    },
+    {
+      "name": "Java",
+      "lines": 10920,
+      "share": 2.4
+    },
+    {
+      "name": "Other",
+      "lines": 7138,
+      "share": 1.5
+    },
+    {
+      "name": "Go",
+      "lines": 4018,
+      "share": 0.9
+    }
+  ],
+  "excludingTests": {
+    "total": 352968,
+    "languages": [
+      {
+        "name": "Python",
+        "lines": 220045,
+        "share": 62.3
+      },
+      {
+        "name": "TypeScript",
+        "lines": 68694,
+        "share": 19.5
+      },
+      {
+        "name": "C++ / headers",
+        "lines": 45537,
+        "share": 12.9
+      },
+      {
+        "name": "Java",
+        "lines": 8525,
+        "share": 2.4
+      },
+      {
+        "name": "Other",
+        "lines": 7138,
+        "share": 2
+      },
+      {
+        "name": "Go",
+        "lines": 3029,
+        "share": 0.9
+      }
+    ],
+    "split": {
+      "Python": 62.3,
+      "TypeScript": 19.5,
+      "C++ / headers": 12.9,
+      "Java": 2.4,
+      "Other": 2
+    }
+  }
+}
