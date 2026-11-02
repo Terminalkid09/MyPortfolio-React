@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-10-26",
+  "generatedAt": "2026-11-02",
   "source": "GitHub API, public non-fork repositories owned by Terminalkid09",
   "files": 1347,
   "repos": [
     {
-      "name": "MyPortfolio-React",
-      "files": 17,
-      "lines": 1717
+      "name": "Nyx",
+      "files": 676,
+      "lines": 81974
     },
     {
       "name": "Phantom",
@@ -14,14 +14,14 @@
       "lines": 21135
     },
     {
+      "name": "MyPortfolio-React",
+      "files": 17,
+      "lines": 1717
+    },
+    {
       "name": "aegis-ecosystem",
       "files": 341,
       "lines": 60777
-    },
-    {
-      "name": "Nyx",
-      "files": 676,
-      "lines": 81974
     },
     {
       "name": "Kraken",
