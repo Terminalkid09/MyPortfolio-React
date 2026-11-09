@@ -1,13 +1,8 @@
 {
-  "generatedAt": "2026-11-02",
+  "generatedAt": "2026-11-09",
   "source": "GitHub API, public non-fork repositories owned by Terminalkid09",
   "files": 1347,
   "repos": [
-    {
-      "name": "Nyx",
-      "files": 676,
-      "lines": 81974
-    },
     {
       "name": "Phantom",
       "files": 109,
@@ -17,6 +12,11 @@
       "name": "MyPortfolio-React",
       "files": 17,
       "lines": 1717
+    },
+    {
+      "name": "Nyx",
+      "files": 676,
+      "lines": 81974
     },
     {
       "name": "aegis-ecosystem",
