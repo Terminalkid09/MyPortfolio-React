@@ -25,7 +25,7 @@ export default function Hero() {
         </h1>
 
         <p className="hero-subtitle reveal">
-          I build production-grade systems — C2 frameworks, SIEM platforms,
+          I build security systems end to end — C2 frameworks, SIEM platforms,
           honeypot networks, and AI-powered security tools.
         </p>
 

@@ -11,9 +11,9 @@ export default function About() {
           <div className="about-card">
             <p>
               I&apos;m a {AGE}-year-old self-taught backend &amp; security engineer
-              from Italy. I design and build production-grade security systems —
-              C2 frameworks, SIEM platforms, honeypot networks, MITM interception
-              tools, and AI-powered security tooling.
+              from Italy. I build security systems end to end — C2 frameworks,
+              SIEM platforms, honeypot networks, MITM interception tools, and the
+              native and web interfaces around them.
             </p>
             <p>
               My projects span the full stack: Python/FastAPI async backends,
@@ -24,8 +24,10 @@ export default function About() {
             </p>
             <p>
               I learn by building real tools that solve real problems — clean
-              architecture, security fundamentals, and systems that work in
-              production.
+              architecture, security fundamentals, and systems that survive
+              contact with a real network. I try to be explicit about what has
+              been measured in the lab, what is only compiled, and what is still
+              a release limitation.
             </p>
           </div>
         </div>

@@ -43,7 +43,7 @@ Nyx/Phantom sentence went stale every time either project moved.
 
 **Skills** — a MEASURED language distribution (source lines across my
 repositories, tracked files only, vendored dependencies and build output
-excluded: Python 70.5%, TypeScript 14.7%, C++ 10.0%, then the rest), followed by
+excluded: Python 59.3%, C++ 16.8%, TypeScript 14.3%, then the rest), followed by
 the categories: languages, backend, security, infrastructure, frontend/desktop,
 AI/ML. The same numbers are in my GitHub profile README, so the two cannot
 disagree.

@@ -40,10 +40,10 @@ const featuredProjects = [
     accent: "phantom",
     emoji: "👻",
     name: "Phantom",
-    what: "Autonomous Red Team Framework",
-    version: "v2.0.0",
+    what: "Offensive Security Framework",
+    version: "v3.0.0",
     description:
-      "Full-spectrum offensive security framework with three integrated modes: (1) C2 Operations Center — cross-platform beacons (Windows PE, Linux ELF, Android ARM64, macOS) with AES-256-GCM + mTLS + HMAC, 35+ commands (shell, screenshot, keylog, inject, SOCKS5, SMB pipe, browser/CDP pivot, cookies, GPS, camera, audio), reflective in-memory loading, NTDLL unhooking, sleep masking, Ekko obfuscation, indirect/direct syscalls; (2) 12 Interactive Pentest Modules — scan, OSINT, web, exploit, brute, payload, handler, analyzer, pivot, wifi, wordlist, report with state-aware suggestions; (3) Autonomous Kill-Chain Agent (WIP) — deterministic planner + anomaly engine runs full kill chain (recon → exploit → beacon deploy → persistence → lateral) without human input, sub-agents for parallel campaigns, social engineering chain (persona → phish → IP grab → network pivot). Includes React + TypeScript Electron GUI (18 views), 101 tests, Docker CI/CD. 68k LOC across Python/C++/ASM/TS. Target: v3.0.0 with BloodHound, Cloud Exploit, Supply Chain, Multi-Operator.",
+      "Open-source red-team framework with three integrated workflows: a cross-platform C2 (Windows PE, Linux ELF, Android ARM64, macOS) using AES-256-GCM, mTLS and per-beacon HMAC; 12 interactive modules covering scan, OSINT, web, exploit, brute, payload, handler, analyzer, pivot, Wi-Fi, wordlist and reporting; and an offline auto-mode that plans the chain from recon to persistence. The desktop client is React + TypeScript + Electron (25 panels). v3.0.0 has 6,500+ tests, CI on Python 3.10–3.12 plus beacon builds on all four platforms, and a lab-verified kill chain with a real beacon check-in. MIT licensed.",
     stack: [
       "Python",
       "C++",
@@ -58,8 +58,14 @@ const featuredProjects = [
       "mitmproxy",
     ],
     images: [
-      { src: "/img/phantomV2.png", alt: "Phantom banner" },
-      { src: "/img/phantomC2.png", alt: "Phantom C2 console" },
+      {
+        src: "/img/phantom-v3-scan.png",
+        alt: "Phantom v3.0.0 Scan workspace — command groups and selected nmap command",
+      },
+      {
+        src: "/img/phantom-v3-auto.png",
+        alt: "Phantom v3.0.0 auto-mode handing off to the C2 control plane",
+      },
     ],
     links: [
       { label: "View code on GitHub →", href: "https://github.com/Terminalkid09/phantom" },
