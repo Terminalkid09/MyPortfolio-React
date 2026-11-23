@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-16",
+  "generatedAt": "2026-11-23",
   "source": "GitHub API, public non-fork repositories owned by Terminalkid09",
-  "files": 2257,
+  "files": 2380,
   "repos": [
     {
-      "name": "Phantom",
-      "files": 1019,
-      "lines": 272637
+      "name": "aegis-ecosystem",
+      "files": 464,
+      "lines": 76264
     },
     {
       "name": "MyPortfolio-React",
@@ -14,9 +14,9 @@
       "lines": 1725
     },
     {
-      "name": "aegis-ecosystem",
-      "files": 341,
-      "lines": 60777
+      "name": "Phantom",
+      "files": 1019,
+      "lines": 272637
     },
     {
       "name": "Nyx",
@@ -69,32 +69,32 @@
       "lines": 73
     }
   ],
-  "total": 456271,
+  "total": 471758,
   "languages": [
     {
       "name": "Python",
-      "lines": 344453,
-      "share": 75.5
+      "lines": 357778,
+      "share": 75.8
     },
     {
       "name": "C++ / headers",
       "lines": 46949,
-      "share": 10.3
+      "share": 10
     },
     {
       "name": "TypeScript",
-      "lines": 40730,
-      "share": 8.9
+      "lines": 41550,
+      "share": 8.8
     },
     {
       "name": "Java",
-      "lines": 10920,
+      "lines": 11097,
       "share": 2.4
     },
     {
       "name": "Other",
-      "lines": 9201,
-      "share": 2
+      "lines": 10366,
+      "share": 2.2
     },
     {
       "name": "Go",
@@ -103,31 +103,31 @@
     }
   ],
   "excludingTests": {
-    "total": 337116,
+    "total": 348410,
     "languages": [
       {
         "name": "Python",
-        "lines": 230985,
-        "share": 68.5
+        "lines": 240279,
+        "share": 69
       },
       {
         "name": "C++ / headers",
         "lines": 46008,
-        "share": 13.6
+        "share": 13.2
       },
       {
         "name": "TypeScript",
-        "lines": 39368,
-        "share": 11.7
+        "lines": 40101,
+        "share": 11.5
       },
       {
         "name": "Other",
-        "lines": 9201,
-        "share": 2.7
+        "lines": 10366,
+        "share": 3
       },
       {
         "name": "Java",
-        "lines": 8525,
+        "lines": 8627,
         "share": 2.5
       },
       {
@@ -137,10 +137,10 @@
       }
     ],
     "split": {
-      "Python": 68.5,
-      "C++ / headers": 13.6,
-      "TypeScript": 11.7,
-      "Other": 2.7,
+      "Python": 69,
+      "C++ / headers": 13.2,
+      "TypeScript": 11.5,
+      "Other": 3,
       "Java": 2.5,
       "Go": 0.9
     }
